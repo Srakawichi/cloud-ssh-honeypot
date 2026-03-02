@@ -45,7 +45,9 @@ The instance contains no production workloads or sensitive data. In case of comp
 ### 5. Attack Logging & Monitoring
 All attacker interactions are captured via Cowrie and processed using structured JSON logs, enabling behavioral analysis and credential pattern evaluation.
 
-![network graph](./images/cloud-ssh-honeypot.drawio.png)
+<p align="center">
+  <img src="./images/cloud-ssh-honeypot.drawio.png" alt="network graph" />
+</p>
 
 ## Threat Observations & Metrics
 
