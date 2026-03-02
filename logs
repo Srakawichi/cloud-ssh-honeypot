@@ -1,0 +1,259 @@
+2026-02-26T02:30Z | 167.99.xxx.xxx (GB) | LOGIN SUCCESS | user=root pass=123456
+2026-02-26T02:30Z | 167.99.xxx.xxx (GB) | CMD | export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c "^processor" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E "model name|Hardware" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,"",$2); print $2; exit}' ; dmidecode -s processor-version 2>/dev/null | head -n1 ; uname -p 2>/dev/null) | awk 'NF{print; exit}' ); gpu_info=$( (lspci 2>/dev/null | grep -i vga; lspci 2>/dev/null | grep -i nvidia) 2>/dev/null | head -n50); cat_help=$( (cat --help 2>&1 | tr '\n' ' ') || cat --help 2>&1); ls_help=$( (ls --help 2>&1 | tr '\n' ' ') || ls --help 2>&1); last_output=$(last 2>/dev/null | head -n 10); echo "UNAME:$uname"; echo "ARCH:$arch"; echo "UPTIME:$uptime"; echo "CPUS:$cpus"; echo "CPU_MODEL:$cpu_model"; echo "GPU:$gpu_info"; echo "CAT_HELP:$cat_help"; echo "LS_HELP:$ls_help"; echo "LAST:$last_output"
+2026-02-26T02:30Z | 167.99.xxx.xxx (GB) | CMD | uname -s -v -n -m 2 > /dev/null
+2026-02-26T02:30Z | 167.99.xxx.xxx (GB) | CMD | uname -m 2 > /dev/null
+2026-02-26T02:30Z | 167.99.xxx.xxx (GB) | CMD | cat /proc/uptime 2 > /dev/null | cut -d. -f1
+2026-02-26T02:31Z | 167.99.xxx.xxx (GB) | LOGIN FAILED | user=root pass=password
+2026-02-26T02:32Z | 167.99.xxx.xxx (GB) | LOGIN FAILED | user=root pass=123456789
+2026-02-26T02:32Z | 167.99.xxx.xxx (GB) | LOGIN FAILED | user=root pass=12345
+2026-02-26T02:33Z | 167.99.xxx.xxx (GB) | LOGIN FAILED | user=root pass=12345678
+2026-02-26T02:34Z | 167.99.xxx.xxx (GB) | LOGIN FAILED | user=root pass=qwerty
+2026-02-26T02:34Z | 34.84.xxx.xxx (JP) | LOGIN FAILED | user=root pass=root
+2026-02-26T02:34Z | 167.99.xxx.xxx (GB) | LOGIN FAILED | user=root pass=123123
+2026-02-26T02:34Z | 34.84.xxx.xxx (JP) | LOGIN FAILED | user=root pass=admin
+2026-02-26T02:35Z | 167.99.xxx.xxx (GB) | LOGIN FAILED | user=root pass=111111
+2026-02-26T02:35Z | 34.84.xxx.xxx (JP) | LOGIN FAILED | user=root pass=1234
+2026-02-26T02:35Z | 34.84.xxx.xxx (JP) | LOGIN FAILED | user=root pass=password
+2026-02-26T02:36Z | 34.84.xxx.xxx (JP) | LOGIN SUCCESS | user=admin pass=admin
+2026-02-26T02:36Z | 34.84.xxx.xxx (JP) | CMD | clear
+2026-02-26T02:36Z | 34.84.xxx.xxx (JP) | CMD | exit
+2026-02-26T02:36Z | 34.84.xxx.xxx (JP) | CMD | ls -l /dev/null 2>/dev/null; echo __DEVNULL_MARKER__
+2026-02-26T02:36Z | 167.99.xxx.xxx (GB) | LOGIN FAILED | user=admin pass=password
+2026-02-26T05:49Z | 116.110.xxx.xxx (VN) | LOGIN FAILED | user=installer pass=installer
+2026-02-26T06:24Z | 185.228.xxx.xxx (RU) | LOGIN FAILED | user=root pass=ubuntu
+2026-02-26T06:24Z | 185.228.xxx.xxx (RU) | LOGIN FAILED | user=root pass=debian
+2026-02-26T06:24Z | 185.228.xxx.xxx (RU) | LOGIN FAILED | user=root pass=centos
+2026-02-26T06:24Z | 185.228.xxx.xxx (RU) | LOGIN FAILED | user=root pass=linux
+2026-02-26T06:24Z | 185.228.xxx.xxx (RU) | LOGIN FAILED | user=root pass=nginx
+2026-02-26T06:24Z | 185.228.xxx.xxx (RU) | LOGIN FAILED | user=root pass=mysql
+2026-02-26T06:24Z | 185.228.xxx.xxx (RU) | LOGIN FAILED | user=root pass=apache
+2026-02-27T02:51Z | 159.203.xxx.xxx (CA) | LOGIN FAILED | user=root pass=ubuntu
+2026-02-27T02:51Z | 159.203.xxx.xxx (CA) | LOGIN FAILED | user=root pass=debian
+2026-02-27T02:51Z | 159.203.xxx.xxx (CA) | LOGIN FAILED | user=root pass=centos
+2026-02-27T02:51Z | 159.203.xxx.xxx (CA) | LOGIN FAILED | user=root pass=linux
+2026-02-27T02:51Z | 159.203.xxx.xxx (CA) | LOGIN FAILED | user=root pass=nginx
+2026-02-27T02:51Z | 159.203.xxx.xxx (CA) | LOGIN FAILED | user=root pass=mysql
+2026-02-27T02:51Z | 159.203.xxx.xxx (CA) | LOGIN FAILED | user=root pass=apache
+2026-02-27T03:35Z | 140.174.xxx.xxx (US) | LOGIN FAILED | user=a pass=a
+2026-02-27T03:35Z | 140.174.xxx.xxx (US) | LOGIN FAILED | user=nil pass=
+2026-02-27T03:35Z | 140.174.xxx.xxx (US) | LOGIN SUCCESS | user=admin pass=admin
+2026-02-27T07:33Z | 165.232.xxx.xxx (GB) | LOGIN FAILED | user=admin pass=123qwe
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=ubuntu
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=debian
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=centos
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=linux
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=nginx
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=mysql
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=apache
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=docker
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=vps
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=host
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=www
+2026-02-27T07:34Z | 165.232.xxx.xxx (GB) | LOGIN FAILED | user=admin pass=123qwerty
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=web
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=default
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=administrator
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=admin
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=password
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=pass
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=passwd
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=temp
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=root
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=system
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=sys
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=sysadmin
+2026-02-27T07:34Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=guest
+2026-02-27T07:35Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=super
+2026-02-27T07:35Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=portfolio
+2026-02-27T07:35Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=temponly
+2026-02-27T07:35Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=qwerty
+2026-02-27T07:35Z | 165.232.xxx.xxx (GB) | LOGIN FAILED | user=admin pass=21
+2026-02-27T07:35Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=test
+2026-02-27T07:35Z | 114.66.xxx.xxx (CN) | LOGIN FAILED | user=root pass=aaa
+2026-02-27T07:35Z | 114.66.xxx.xxx (CN) | LOGIN SUCCESS | user=root pass=123456
+2026-02-27T07:35Z | 165.232.xxx.xxx (GB) | LOGIN FAILED | user=admin pass=321
+2026-02-27T07:36Z | 165.232.xxx.xxx (GB) | LOGIN FAILED | user=admin pass=4321
+2026-02-27T07:37Z | 165.232.xxx.xxx (GB) | LOGIN FAILED | user=admin pass=54321
+2026-02-27T07:37Z | 165.232.xxx.xxx (GB) | LOGIN FAILED | user=admin pass=654321
+2026-02-27T07:38Z | 165.232.xxx.xxx (GB) | LOGIN FAILED | user=admin pass=Pa$w0rd
+2026-02-27T09:18Z | 34.84.xxx.xxx (JP) | LOGIN FAILED | user=root pass=root
+2026-02-27T09:20Z | 34.84.xxx.xxx (JP) | LOGIN FAILED | user=root pass=admin
+2026-02-27T09:20Z | 34.84.xxx.xxx (JP) | LOGIN FAILED | user=root pass=1234
+2026-02-27T09:20Z | 34.84.xxx.xxx (JP) | LOGIN SUCCESS | user=root pass=password
+2026-02-27T09:20Z | 34.84.xxx.xxx (JP) | CMD | clear
+2026-02-27T09:20Z | 34.84.xxx.xxx (JP) | CMD | exit
+2026-02-27T09:20Z | 34.84.xxx.xxx (JP) | CMD | ls -l /dev/null 2>/dev/null; echo __DEVNULL_MARKER__
+2026-02-27T10:55Z | 34.22.xxx.xxx (BE) | LOGIN SUCCESS | user=admin pass=admin
+2026-02-27T11:45Z | 152.42.xxx.xxx (US) | LOGIN SUCCESS | user=admin pass=admin
+2026-02-27T11:45Z | 152.42.xxx.xxx (US) | CMD | export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c "^processor" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E "model name|Hardware" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,"",$2); print $2; exit}' ; dmidecode -s processor-version 2>/dev/null | head -n1 ; uname -p 2>/dev/null) | awk 'NF{print; exit}' ); gpu_info=$( (lspci 2>/dev/null | grep -i vga; lspci 2>/dev/null | grep -i nvidia) 2>/dev/null | head -n50); cat_help=$( (cat --help 2>&1 | tr '\n' ' ') || cat --help 2>&1); ls_help=$( (ls --help 2>&1 | tr '\n' ' ') || ls --help 2>&1); last_output=$(last 2>/dev/null | head -n 10); echo "UNAME:$uname"; echo "ARCH:$arch"; echo "UPTIME:$uptime"; echo "CPUS:$cpus"; echo "CPU_MODEL:$cpu_model"; echo "GPU:$gpu_info"; echo "CAT_HELP:$cat_help"; echo "LS_HELP:$ls_help"; echo "LAST:$last_output"
+2026-02-27T11:45Z | 152.42.xxx.xxx (US) | CMD | uname -s -v -n -m 2 > /dev/null
+2026-02-27T11:45Z | 152.42.xxx.xxx (US) | CMD | uname -m 2 > /dev/null
+2026-02-27T11:45Z | 152.42.xxx.xxx (US) | CMD | cat /proc/uptime 2 > /dev/null | cut -d. -f1
+2026-02-27T11:45Z | 152.42.xxx.xxx (US) | LOGIN FAILED | user=admin pass=admin123
+2026-02-27T11:46Z | 152.42.xxx.xxx (US) | LOGIN FAILED | user=admin pass=admin2026
+2026-02-27T11:46Z | 152.42.xxx.xxx (US) | LOGIN FAILED | user=admin pass=password
+2026-02-27T11:47Z | 152.42.xxx.xxx (US) | LOGIN FAILED | user=admin pass=123456
+2026-02-27T11:48Z | 152.42.xxx.xxx (US) | LOGIN FAILED | user=admin pass=qwerty
+2026-02-27T11:48Z | 87.249.xxx.xxx (SE) | LOGIN SUCCESS | user=root pass=root
+2026-02-27T11:48Z | 87.249.xxx.xxx (SE) | CMD | /ip cloud print
+2026-02-27T11:48Z | 87.249.xxx.xxx (SE) | CMD FAILED | /ip cloud print
+2026-02-27T11:48Z | 87.249.xxx.xxx (SE) | CMD | ifconfig
+2026-02-27T11:48Z | 87.249.xxx.xxx (SE) | CMD | uname -a
+2026-02-27T11:48Z | 87.249.xxx.xxx (SE) | CMD | cat /proc/cpuinfo
+2026-02-27T11:48Z | 87.249.xxx.xxx (SE) | CMD | ps | grep '[Mm]iner'
+2026-02-27T11:48Z | 87.249.xxx.xxx (SE) | CMD | ps -ef | grep '[Mm]iner'
+2026-02-27T11:48Z | 87.249.xxx.xxx (SE) | CMD | ls -la ~/.local/share/TelegramDesktop/tdata /home/*/.local/share/TelegramDesktop/tdata /dev/ttyGSM* /dev/ttyUSB-mod* /var/spool/sms/* /var/log/smsd.log /etc/smsd.conf* /usr/bin/qmuxd /var/qmux_connect_socket /etc/config/simman /dev/modem* /var/config/sms/*
+2026-02-27T11:48Z | 87.249.xxx.xxx (SE) | CMD | locate D877F783D5D3EF8Cs
+2026-02-27T11:48Z | 87.249.xxx.xxx (SE) | CMD | echo Hi | cat -n
+2026-02-27T11:48Z | 152.42.xxx.xxx (US) | LOGIN FAILED | user=admin pass=letmein
+2026-02-27T11:49Z | 152.42.xxx.xxx (US) | LOGIN FAILED | user=admin pass=passw0rd
+2026-02-27T11:49Z | 152.42.xxx.xxx (US) | LOGIN FAILED | user=admin pass=P@ssw0rd
+2026-02-27T11:50Z | 152.42.xxx.xxx (US) | LOGIN FAILED | user=admin pass=welcome
+2026-02-27T11:51Z | 152.42.xxx.xxx (US) | LOGIN FAILED | user=administrator pass=administrator
+2026-02-27T12:23Z | 46.101.xxx.xxx (GB) | LOGIN SUCCESS | user=root pass=123456
+2026-02-27T12:23Z | 46.101.xxx.xxx (GB) | CMD | export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c "^processor" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E "model name|Hardware" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,"",$2); print $2; exit}' ; dmidecode -s processor-version 2>/dev/null | head -n1 ; uname -p 2>/dev/null) | awk 'NF{print; exit}' ); gpu_info=$( (lspci 2>/dev/null | grep -i vga; lspci 2>/dev/null | grep -i nvidia) 2>/dev/null | head -n50); cat_help=$( (cat --help 2>&1 | tr '\n' ' ') || cat --help 2>&1); ls_help=$( (ls --help 2>&1 | tr '\n' ' ') || ls --help 2>&1); last_output=$(last 2>/dev/null | head -n 10); echo "UNAME:$uname"; echo "ARCH:$arch"; echo "UPTIME:$uptime"; echo "CPUS:$cpus"; echo "CPU_MODEL:$cpu_model"; echo "GPU:$gpu_info"; echo "CAT_HELP:$cat_help"; echo "LS_HELP:$ls_help"; echo "LAST:$last_output"
+2026-02-27T12:23Z | 46.101.xxx.xxx (GB) | CMD | uname -s -v -n -m 2 > /dev/null
+2026-02-27T12:23Z | 46.101.xxx.xxx (GB) | CMD | uname -m 2 > /dev/null
+2026-02-27T12:23Z | 46.101.xxx.xxx (GB) | CMD | cat /proc/uptime 2 > /dev/null | cut -d. -f1
+2026-02-27T12:23Z | 46.101.xxx.xxx (GB) | LOGIN SUCCESS | user=root pass=password
+2026-02-27T12:23Z | 46.101.xxx.xxx (GB) | CMD | export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c "^processor" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E "model name|Hardware" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,"",$2); print $2; exit}' ; dmidecode -s processor-version 2>/dev/null | head -n1 ; uname -p 2>/dev/null) | awk 'NF{print; exit}' ); gpu_info=$( (lspci 2>/dev/null | grep -i vga; lspci 2>/dev/null | grep -i nvidia) 2>/dev/null | head -n50); cat_help=$( (cat --help 2>&1 | tr '\n' ' ') || cat --help 2>&1); ls_help=$( (ls --help 2>&1 | tr '\n' ' ') || ls --help 2>&1); last_output=$(last 2>/dev/null | head -n 10); echo "UNAME:$uname"; echo "ARCH:$arch"; echo "UPTIME:$uptime"; echo "CPUS:$cpus"; echo "CPU_MODEL:$cpu_model"; echo "GPU:$gpu_info"; echo "CAT_HELP:$cat_help"; echo "LS_HELP:$ls_help"; echo "LAST:$last_output"
+2026-02-27T12:23Z | 46.101.xxx.xxx (GB) | CMD | uname -s -v -n -m 2 > /dev/null
+2026-02-27T12:23Z | 46.101.xxx.xxx (GB) | CMD | uname -m 2 > /dev/null
+2026-02-27T12:23Z | 46.101.xxx.xxx (GB) | CMD | cat /proc/uptime 2 > /dev/null | cut -d. -f1
+2026-02-27T12:24Z | 46.101.xxx.xxx (GB) | LOGIN FAILED | user=root pass=admin
+2026-02-27T12:25Z | 46.101.xxx.xxx (GB) | LOGIN FAILED | user=root pass=12345678
+2026-02-27T12:26Z | 46.101.xxx.xxx (GB) | LOGIN SUCCESS | user=root pass=12345
+2026-02-27T12:26Z | 46.101.xxx.xxx (GB) | CMD | export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c "^processor" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E "model name|Hardware" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,"",$2); print $2; exit}' ; dmidecode -s processor-version 2>/dev/null | head -n1 ; uname -p 2>/dev/null) | awk 'NF{print; exit}' ); gpu_info=$( (lspci 2>/dev/null | grep -i vga; lspci 2>/dev/null | grep -i nvidia) 2>/dev/null | head -n50); cat_help=$( (cat --help 2>&1 | tr '\n' ' ') || cat --help 2>&1); ls_help=$( (ls --help 2>&1 | tr '\n' ' ') || ls --help 2>&1); last_output=$(last 2>/dev/null | head -n 10); echo "UNAME:$uname"; echo "ARCH:$arch"; echo "UPTIME:$uptime"; echo "CPUS:$cpus"; echo "CPU_MODEL:$cpu_model"; echo "GPU:$gpu_info"; echo "CAT_HELP:$cat_help"; echo "LS_HELP:$ls_help"; echo "LAST:$last_output"
+2026-02-27T12:26Z | 46.101.xxx.xxx (GB) | CMD | uname -s -v -n -m 2 > /dev/null
+2026-02-27T12:26Z | 46.101.xxx.xxx (GB) | CMD | uname -m 2 > /dev/null
+2026-02-27T12:26Z | 46.101.xxx.xxx (GB) | CMD | cat /proc/uptime 2 > /dev/null | cut -d. -f1
+2026-02-27T12:26Z | 46.101.xxx.xxx (GB) | LOGIN FAILED | user=root pass=qwerty
+2026-02-27T12:27Z | 46.101.xxx.xxx (GB) | LOGIN FAILED | user=root pass=123456789
+2026-02-27T12:28Z | 46.101.xxx.xxx (GB) | LOGIN FAILED | user=root pass=123123
+2026-02-27T12:28Z | 46.101.xxx.xxx (GB) | LOGIN FAILED | user=root pass=111111
+2026-02-27T12:29Z | 46.101.xxx.xxx (GB) | LOGIN FAILED | user=root pass=password1
+2026-02-27T13:20Z | 138.68.xxx.xxx (GB) | LOGIN FAILED | user=admin pass=123qwe
+2026-02-27T13:21Z | 138.68.xxx.xxx (GB) | LOGIN FAILED | user=admin pass=123qwerty
+2026-02-27T13:22Z | 138.68.xxx.xxx (GB) | LOGIN FAILED | user=admin pass=21
+2026-02-27T13:23Z | 138.68.xxx.xxx (GB) | LOGIN FAILED | user=admin pass=321
+2026-02-27T13:43Z | 52.161.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-27T13:45Z | 20.55.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-27T13:46Z | 52.173.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-27T13:47Z | 20.161.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-27T14:33Z | 162.243.xxx.xxx (US) | LOGIN SUCCESS | user=root pass=root
+2026-02-27T14:33Z | 162.243.xxx.xxx (US) | CMD | export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c "^processor" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E "model name|Hardware" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,"",$2); print $2; exit}' ; dmidecode -s processor-version 2>/dev/null | head -n1 ; uname -p 2>/dev/null) | awk 'NF{print; exit}' ); gpu_info=$( (lspci 2>/dev/null | grep -i vga; lspci 2>/dev/null | grep -i nvidia) 2>/dev/null | head -n50); cat_help=$( (cat --help 2>&1 | tr '\n' ' ') || cat --help 2>&1); ls_help=$( (ls --help 2>&1 | tr '\n' ' ') || ls --help 2>&1); last_output=$(last 2>/dev/null | head -n 10); echo "UNAME:$uname"; echo "ARCH:$arch"; echo "UPTIME:$uptime"; echo "CPUS:$cpus"; echo "CPU_MODEL:$cpu_model"; echo "GPU:$gpu_info"; echo "CAT_HELP:$cat_help"; echo "LS_HELP:$ls_help"; echo "LAST:$last_output"
+2026-02-27T14:33Z | 162.243.xxx.xxx (US) | CMD | uname -s -v -n -m 2 > /dev/null
+2026-02-27T14:33Z | 162.243.xxx.xxx (US) | CMD | uname -m 2 > /dev/null
+2026-02-27T14:33Z | 162.243.xxx.xxx (US) | CMD | cat /proc/uptime 2 > /dev/null | cut -d. -f1
+2026-02-27T14:34Z | 162.243.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-27T14:35Z | 162.243.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-27T14:36Z | 162.243.xxx.xxx (US) | LOGIN FAILED | user=root pass=123
+2026-02-27T14:37Z | 162.243.xxx.xxx (US) | LOGIN FAILED | user=root pass=1234
+2026-02-27T14:38Z | 162.243.xxx.xxx (US) | LOGIN SUCCESS | user=root pass=12345
+2026-02-27T14:38Z | 162.243.xxx.xxx (US) | CMD | export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c "^processor" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E "model name|Hardware" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,"",$2); print $2; exit}' ; dmidecode -s processor-version 2>/dev/null | head -n1 ; uname -p 2>/dev/null) | awk 'NF{print; exit}' ); gpu_info=$( (lspci 2>/dev/null | grep -i vga; lspci 2>/dev/null | grep -i nvidia) 2>/dev/null | head -n50); cat_help=$( (cat --help 2>&1 | tr '\n' ' ') || cat --help 2>&1); ls_help=$( (ls --help 2>&1 | tr '\n' ' ') || ls --help 2>&1); last_output=$(last 2>/dev/null | head -n 10); echo "UNAME:$uname"; echo "ARCH:$arch"; echo "UPTIME:$uptime"; echo "CPUS:$cpus"; echo "CPU_MODEL:$cpu_model"; echo "GPU:$gpu_info"; echo "CAT_HELP:$cat_help"; echo "LS_HELP:$ls_help"; echo "LAST:$last_output"
+2026-02-27T14:38Z | 162.243.xxx.xxx (US) | CMD | uname -s -v -n -m 2 > /dev/null
+2026-02-27T14:38Z | 162.243.xxx.xxx (US) | CMD | uname -m 2 > /dev/null
+2026-02-27T14:38Z | 162.243.xxx.xxx (US) | CMD | cat /proc/uptime 2 > /dev/null | cut -d. -f1
+2026-02-27T17:31Z | 135.119.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-27T17:38Z | 74.235.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-27T17:42Z | 132.196.xxx.xxx (GB) | LOGIN FAILED | user=root pass=1
+2026-02-27T17:42Z | 52.238.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-27T17:46Z | 64.236.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-27T17:52Z | 52.159.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-27T17:52Z | 20.109.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-27T17:58Z | 20.168.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-27T18:00Z | 135.232.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-27T18:03Z | 52.173.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-27T18:03Z | 172.208.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-27T18:05Z | 64.236.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-27T18:12Z | 20.169.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-27T18:15Z | 172.184.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-27T18:15Z | 172.208.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-27T18:15Z | 74.249.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-27T18:17Z | 52.176.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-27T18:22Z | 135.119.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-27T18:25Z | 52.238.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-27T18:29Z | 9.234.xxx.xxx (GB) | LOGIN FAILED | user=root pass=1
+2026-02-27T18:30Z | 52.159.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-27T18:34Z | 132.196.xxx.xxx (GB) | LOGIN FAILED | user=root pass=12
+2026-02-27T18:38Z | 4.236.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-27T18:38Z | 64.236.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-27T18:39Z | 132.196.xxx.xxx (GB) | LOGIN FAILED | user=root pass=12
+2026-02-27T18:44Z | 74.235.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-27T18:54Z | 135.232.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-27T18:54Z | 64.236.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-27T18:57Z | 52.173.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-27T18:59Z | 172.208.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-27T18:59Z | 20.109.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-27T19:01Z | 20.169.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-27T19:09Z | 52.159.xxx.xxx (US) | LOGIN FAILED | user=root pass=123
+2026-02-27T19:10Z | 52.238.xxx.xxx (US) | LOGIN FAILED | user=root pass=123
+2026-02-27T19:10Z | 172.184.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-27T19:11Z | 172.208.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-27T19:11Z | 52.176.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-27T19:14Z | 174.138.xxx.xxx (NL) | LOGIN FAILED | user=pi pass=raspberry
+2026-02-27T19:15Z | 174.138.xxx.xxx (NL) | LOGIN FAILED | user=root pass=1qaz2wsx
+2026-02-27T19:16Z | 174.138.xxx.xxx (NL) | LOGIN FAILED | user=root pass=qwerty123456
+2026-02-27T19:16Z | 135.119.xxx.xxx (US) | LOGIN FAILED | user=root pass=123
+2026-02-27T19:16Z | 20.168.xxx.xxx (US) | LOGIN FAILED | user=root pass=123
+2026-02-27T19:17Z | 174.138.xxx.xxx (NL) | LOGIN FAILED | user=root pass=!root
+2026-02-27T19:17Z | 174.138.xxx.xxx (NL) | LOGIN FAILED | user=root pass=root!@#
+2026-02-27T19:18Z | 174.138.xxx.xxx (NL) | LOGIN FAILED | user=root pass=P@ssw0rd2026
+2026-02-27T19:19Z | 174.138.xxx.xxx (NL) | LOGIN FAILED | user=root pass=Admin2026!
+2026-02-27T19:20Z | 174.138.xxx.xxx (NL) | LOGIN FAILED | user=root pass=root2026
+2026-02-27T19:22Z | 74.249.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-27T19:28Z | 132.196.xxx.xxx (GB) | LOGIN FAILED | user=root pass=123
+2026-02-27T19:34Z | 132.196.xxx.xxx (GB) | LOGIN FAILED | user=root pass=123
+2026-02-27T19:36Z | 9.234.xxx.xxx (GB) | LOGIN FAILED | user=root pass=12
+2026-02-27T19:44Z | 64.236.xxx.xxx (US) | LOGIN FAILED | user=root pass=123
+2026-02-27T19:46Z | 4.236.xxx.xxx (US) | LOGIN FAILED | user=root pass=123
+2026-02-27T19:49Z | 135.232.xxx.xxx (US) | LOGIN FAILED | user=root pass=123
+2026-02-27T19:51Z | 74.235.xxx.xxx (US) | LOGIN FAILED | user=root pass=123
+2026-02-27T19:52Z | 20.169.xxx.xxx (US) | LOGIN FAILED | user=root pass=123
+2026-02-27T19:52Z | 52.173.xxx.xxx (US) | LOGIN FAILED | user=root pass=123
+2026-02-27T19:55Z | 52.238.xxx.xxx (US) | LOGIN FAILED | user=root pass=1234
+2026-02-27T19:55Z | 172.208.xxx.xxx (US) | LOGIN FAILED | user=root pass=123
+2026-02-27T19:56Z | 20.168.xxx.xxx (US) | LOGIN FAILED | user=root pass=1234
+2026-02-27T20:05Z | 172.184.xxx.xxx (US) | LOGIN FAILED | user=root pass=123
+2026-02-27T20:06Z | 52.176.xxx.xxx (US) | LOGIN FAILED | user=root pass=123
+2026-02-27T20:07Z | 172.86.xxx.xxx (DE) | LOGIN FAILED | user=root pass=-
+2026-02-27T20:07Z | 172.86.xxx.xxx (DE) | LOGIN SUCCESS | user=root pass=root
+2026-02-27T20:07Z | 172.208.xxx.xxx (US) | LOGIN FAILED | user=root pass=123
+2026-02-27T20:07Z | 20.109.xxx.xxx (US) | LOGIN FAILED | user=root pass=123
+2026-02-27T20:11Z | 135.119.xxx.xxx (US) | LOGIN FAILED | user=root pass=1234
+2026-02-28T02:53Z | 103.116.xxx.xxx (VN) | LOGIN SUCCESS | user=root pass=ubuntu
+2026-02-28T06:04Z | 68.220.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-28T06:04Z | 64.236.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-28T06:05Z | 4.236.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-28T06:12Z | 52.240.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-28T06:12Z | 52.165.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-28T06:13Z | 172.183.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-28T06:15Z | 57.151.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-28T06:20Z | 52.173.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-28T06:21Z | 64.236.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-28T06:22Z | 172.184.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-28T06:25Z | 52.242.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-28T06:26Z | 172.200.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-28T06:26Z | 172.212.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-28T06:27Z | 128.24.xxx.xxx (GB) | LOGIN FAILED | user=root pass=1
+2026-02-28T06:28Z | 52.234.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-28T06:33Z | 172.172.xxx.xxx (US) | LOGIN FAILED | user=root pass=1
+2026-02-28T06:39Z | 145.132.xxx.xxx (GB) | LOGIN FAILED | user=root pass=1
+2026-02-28T06:52Z | 64.236.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-28T06:54Z | 52.165.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-28T06:57Z | 68.220.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-28T06:57Z | 64.236.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-28T07:02Z | 172.183.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-28T07:04Z | 4.236.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-28T07:05Z | 52.240.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-28T07:11Z | 57.151.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-28T07:14Z | 52.173.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-28T07:14Z | 64.236.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-28T07:17Z | 172.184.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-28T07:19Z | 52.242.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-28T07:21Z | 172.212.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-28T07:22Z | 52.234.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-28T07:22Z | 128.24.xxx.xxx (GB) | LOGIN FAILED | user=root pass=12
+2026-02-28T07:26Z | 172.200.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
+2026-02-28T07:37Z | 52.165.xxx.xxx (US) | LOGIN FAILED | user=root pass=123
+2026-02-28T07:40Z | 172.172.xxx.xxx (US) | LOGIN FAILED | user=root pass=12
