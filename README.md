@@ -76,7 +76,6 @@ This indicates automated post-compromise reconnaissance rather than manual inter
 The use of ps | grep '[Mm]iner' suggests botnet competition.
 Automated malware commonly checks for existing crypto-mining processes and attempts to terminate them before deploying its own payload.
 
-
 ### 3. Global Attack Sources
 
 Attack traffic originated from multiple geographic regions including:
@@ -111,13 +110,29 @@ This confirms that publicly exposed SSH services in cloud environments are scann
 #### Key Observation
 
 The majority of successful compromises were immediately followed by automated system resource evaluation, indicating preparation for potential cryptomining deployment.
-### Conclusion
 
-This project simulated a publicly exposed SSH server with intentionally weak credentials to observe real-world attack behavior.
+## Conclusion
 
-Within only a few hours, the first login attempts appeared. Shortly after, authentication attempts increased rapidly. Once access was gained, attackers immediately executed automated scripts to fingerprint the system, evaluate hardware resources, detect existing miners, and test for honeypot characteristics.
+This project demonstrated how quickly publicly exposed SSH services in cloud environments are discovered and targeted by automated attack infrastructure.
 
-The results clearly show that exposed SSH services are quickly discovered and systematically exploited by automated botnets.
+Within hours of deployment, the instance was scanned and subjected to continuous credential-stuffing attempts originating from globally distributed sources. Successful logins were immediately followed by scripted post-exploitation activity focused on system fingerprinting, hardware resource evaluation, and miner competition checks. The behavior strongly indicates automated botnet operations rather than manual intrusion attempts.
 
-Never expose port 22 to 0.0.0.0/0.
-Restrict access to trusted IP addresses or use secure alternatives such as VPNs or SSH tunnels to prevent unnecessary exposure.
+The findings highlight an important cloud security principle: internet-facing services are not passively exposed — they are actively and continuously probed.
+
+From an architectural perspective, this experiment reinforces the importance of:
+
+- Minimizing public attack surface
+- Enforcing strict network segmentation
+- Restricting administrative access paths
+- Applying least-privilege principles at both host and cloud levels
+- Monitoring exposed services in real time
+
+Public SSH exposure may be operationally necessary in certain scenarios, but it requires strong hardening measures such as key-based authentication, IP allowlisting, bastion architectures, or managed access services.
+
+The experiment confirms that even short-lived cloud resources become part of the global attack surface immediately after exposure.
+
+## Future Improvements
+
+No full malware payload downloads were observed during the experiment. Increasing the realism of the host environment may improve the likelihood of triggering advanced post-exploitation stages in future iterations.
+
+> This project was deployed in an isolated AWS environment for research and educational purposes only. No production systems or third-party assets were involved.
