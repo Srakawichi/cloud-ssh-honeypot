@@ -87,22 +87,30 @@ This confirms that publicly exposed SSH services in cloud environments are scann
 
 ### 4. Statistical Overview
 
-Across 200 login attempts, 17 resulted in successful authentication (8.5%).
+#### Authentication Outcome
 
-Among successful sessions:
+> **Total login attempts:** 200  
+> **Successful authentications:** 17  
+> **Success rate:** 8.5%
 
-41% performed CPU enumeration
+---
 
-35% performed GPU detection
+#### Post-Compromise Activity  
+*(Based on 17 successful sessions)*
 
-35% executed full automated fingerprinting scripts
+| Activity                              | Percentage |
+|---------------------------------------|------------|
+| CPU enumeration                      | 41%        |
+| GPU detection                        | 35%        |
+| Full automated fingerprinting        | 35%        |
+| Honeypot detection checks            | 12%        |
+| Miner process discovery              | 6%         |
 
-12% performed honeypot detection checks
+---
 
-6% performed miner process discovery
+#### Key Observation
 
-The data indicates that the majority of successful compromises were immediately followed by automated resource evaluation for potential cryptomining deployment.
-
+The majority of successful compromises were immediately followed by automated system resource evaluation, indicating preparation for potential cryptomining deployment.
 ### Conclusion
 
 This project simulated a publicly exposed SSH server with intentionally weak credentials to observe real-world attack behavior.
