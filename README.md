@@ -55,11 +55,19 @@ All attacker interactions are captured via Cowrie and processed using structured
 
 Within ~36 hours of exposure, the instance received continuous brute-force login attempts targeting primarily the `root` and `admin` accounts.
 
+<p align="center">
+  <img src="./images/totalAttacks.png" alt="network graph" />
+</p>
+
 Observed password patterns included:
 
 - Sequential numeric passwords (1 → 123456789)
 - Default Linux credentials (root, ubuntu, debian, centos)
 - Common weak passwords (password, passw0rd, welcome)
+
+<p align="center">
+  <img src="./images/passwortAttempts.png" alt="network graph" />
+</p>
 
 ### 2. Immediate Post-Exploitation Enumeration
 
